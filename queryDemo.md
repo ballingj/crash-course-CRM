@@ -1,4 +1,4 @@
-### ***(1)Returns all customers from customer table
+### (1)Returns all customers from customer table
 ```python
 customers = Customer.objects.all()
 ```
@@ -18,28 +18,28 @@ lastCustomer = Customer.objects.last()
 customerByName = Customer.objects.get(name='Peter Piper')
 ```
 
-### ***(5)Returns single customer by id
+### (5)Returns single customer by id
 ```python
 customerById = Customer.objects.get(id=4)
 ```
 
-### ***(6)Returns all orders related to customer (firstCustomer variable set above)
+### (6)Returns all orders related to customer (firstCustomer variable set above)
 ```python
 firstCustomer.order_set.all()
 ```
 
-### (7)***Returns orders customer name: (Query parent model values)
+### (7)Returns orders customer name: (Query parent model values)
 ```python
 order = Order.objects.first()
 parentName = order.customer.name
 ```
 
-### (8)***Returns products from products table with value of "Out Door" in category attribute
+### (8)Returns products from products table with value of "Out Door" in category attribute
 ```python
 products = Product.objects.filter(category="Out Door")
 ```
 
-### (9)***Order/Sort Objects by id
+### (9)Order/Sort Objects by id
 ```python
 leastToGreatest = Product.objects.all().order_by('id')
 greatestToLeast = Product.objects.all().order_by('-id')
